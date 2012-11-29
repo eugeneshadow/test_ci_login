@@ -7,8 +7,9 @@ class Login extends CI_Controller {
 		parent::__construct();
 	}
 
-	function index($id)
+	function index()
 	{	
+		$id = $this->input->get('id');
 		if($this->session->userdata('login') == false){
 			redirect(base_url()."/login");	
 		}		
