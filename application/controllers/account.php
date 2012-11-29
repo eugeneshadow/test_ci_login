@@ -11,7 +11,7 @@ class Login extends CI_Controller {
 	{	
 		$id = $this->input->get('id');
 		if($this->session->userdata('login') == false){
-			redirect(base_url());	
+			redirect('login/index');	
 		}		
 		$this->load->model('user_model');
 		$data['info'] = $this->user_model->get_user_data($id);
