@@ -16,7 +16,8 @@ class Login extends CI_Controller {
 		$this->load->model('user_model');
 		$data['info'] = $this->user_model->get_user_data($id);
 		
-	}	$this->load->view('account_info', $data);
+		$this->load->view('account_info', $data);
+	}
 }
 
 /* End of file account.php */
