@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= '';
+$config['base_url']	= 'http://107.20.241.224/test_ci_login/';
 
 /*
 |--------------------------------------------------------------------------
@@ -224,7 +224,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = '84327594';
 
 /*
 |--------------------------------------------------------------------------
@@ -262,13 +262,11 @@ $config['sess_time_to_update']	= 300;
 | 'cookie_prefix' = Set a prefix if you need to avoid collisions
 | 'cookie_domain' = Set to .your-domain.com for site-wide cookies
 | 'cookie_path'   =  Typically will be a forward slash
-| 'cookie_secure' =  Cookies will only be set if a secure HTTPS connection exists.
 |
 */
-$config['cookie_prefix']	= "";
-$config['cookie_domain']	= "";
-$config['cookie_path']		= "/";
-$config['cookie_secure']	= FALSE;
+$config['cookie_prefix']	= '';
+$config['cookie_domain']	= '';
+$config['cookie_path']		= '/';
 
 /*
 |--------------------------------------------------------------------------
