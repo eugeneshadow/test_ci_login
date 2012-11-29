@@ -32,7 +32,24 @@ class Login extends CI_Controller {
 	}
 	
 	public function register(){
-		$this->load->view('login');		
+		$this->session->set_userdata(array('login' => false));
+		$this->load->view('register');		
+	}
+	
+	public function register_process(){
+		$input['user_id'] = $this->input->post('username');
+		$input['password'] = $this->input->post('password');
+		$input['email'] = $this->input->post('email');
+		
+		$this->load->model('user_model');
+		$id = $this->user_model->add_user_info($input);
+
+		if($id > 0){
+			$data['message'] = "Register is success.";
+		} else {
+			$data['message'] = "Register is failed.";
+		}
+		$this->load->view('register_result', $data);
 	}
 	
 }

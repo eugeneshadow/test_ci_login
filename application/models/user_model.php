@@ -31,4 +31,20 @@ class User_model extends CI_Model
 		$id = ($array->num_rows() > 0) ? $record_set[0]['id'] : 0;
     	return $id;     	   	    	
     }
+    function get_user_data($id){
+    	$this->db->select('user.*');
+    	$this->db->from('user');
+    	$this->db->where('user.id', $id);
+    	
+    	$array = $this->db->get();
+    	$record_set = $array->result_array();
+    	return $record_set;
+    }
+    
+    function add_user_info($array_data){
+    	$this->db->insert('user', $array_data);
+    	$id = $this->db->insert_id();
+    	
+    	return $id;
+    }
 }
