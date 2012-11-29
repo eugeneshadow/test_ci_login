@@ -3,6 +3,6 @@
 	<title>Login</title>
 </head>
 <body>
-<?php echo message;?>
+<?php echo $message;?>
 </body>
 </html>
